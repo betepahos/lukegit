@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<dialog text=" Field norm" name="fNorm" icon="/img/luke.gif" modal="true"
+	columns="1" top="8" left="8" bottom="4" right="8" gap="4" close="remove(fNorm)"
+	resizable="true">
+	<panel columns="2" weightx="1" halign="fill" gap="4">
+                <label text="Document id: "/>
+                <label name="docNum" font="bold"/>
+		<label text="Field name: "/>
+		<label name="fld" font="bold"/>
+		<label text="Field norm: "/>
+		<label name="curNorm" font="bold"/>
+		<separator colspan="2"/>
+		<label colspan="2" text="Encode other field norm using this TFIDFSimilarity (full class name): "/>
+		<panel gap="2" colspan="2" weightx="1" halign="fill">
+			<textfield weightx="1" halign="fill" name="sim" font="10"/>
+			<button type="default" tooltip="Refresh" icon="/img/refresh.png" action="displayNewNorm(fNorm)"/>
+		</panel>
+		<label text="Enter norm value:"/>
+		<textfield name="newNorm" action="displayNewNorm(fNorm)" />
+    	<label colspan="2"/>
+		<label text="Encoded value rounded to:"/>
+		<label name="encNorm"/>
+	</panel>
+    <panel weightx="1" halign="center" top="8" bottom="4" right="6" gap="8">
+        <button type="default" text="Close" halign="center" action="remove(fNorm)"/>
+    </panel>
+</dialog>
